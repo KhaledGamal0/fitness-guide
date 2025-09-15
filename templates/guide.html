@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Your Fitness Guide</title>
+  <style>
+    body{font-family:sans-serif;background:#fafafa;margin:0;padding:0;}
+    .container{max-width:960px;margin:20px auto;padding:16px;}
+    a.btn{padding:10px 16px;border:1px solid #ccc;border-radius:6px;text-decoration:none;color:#111;display:inline-block;margin-bottom:12px;}
+    #guideContent{background:#fff;padding:16px;border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="/" class="btn">← Back</a>
+    <div id="guideContent">
+      {% if result_html %}
+        {{ result_html }}
+      {% else %}
+        <p>No guide generated.</p>
+      {% endif %}
+    </div>
+  </div>
+</body>
+</html>

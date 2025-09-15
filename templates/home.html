@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fitness Guide Generator</title>
+  <style>
+    body{font-family:sans-serif;background:#f5f5f5;margin:0;padding:0;}
+    .container{max-width:960px;margin:20px auto;padding:16px;}
+    form{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;background:#fff;padding:16px;border-radius:8px;}
+    label{display:grid;gap:6px;font-weight:600;}
+    input,select{padding:8px;border:1px solid #ccc;border-radius:6px;}
+    button{padding:10px 16px;border:none;border-radius:6px;background:#1a73e8;color:#fff;font-weight:700;cursor:pointer;}
+    a.btn{padding:10px 16px;border:1px solid #ccc;border-radius:6px;text-decoration:none;color:#111;display:inline-block;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Fitness Guide Generator</h1>
+    <form method="POST" action="/guide">
+      <label>Age <input name="age" type="number" placeholder="25" /></label>
+      <label>Height (cm) <input name="height_cm" type="number" placeholder="178" /></label>
+      <label>Weight (kg) <input name="weight_kg" type="number" placeholder="80" /></label>
+      <label>Goal
+        <select name="goal">
+          <option value="">— Select —</option>
+          <option>Lose fat</option>
+          <option>Build muscle</option>
+          <option>Endurance</option>
+          <option>Recomposition</option>
+        </select>
+      </label>
+      <label>Work hours <input name="work_hours" type="text" placeholder="8am–5pm" /></label>
+      <label>Language
+        <select name="language">
+          <option value="">Auto</option>
+          <option>Arabic</option>
+          <option>English</option>
+        </select>
+      </label>
+      <label style="display:flex;align-items:center;gap:8px;">
+        <input name="exclude_eggs" type="checkbox" /> Exclude eggs
+      </label>
+      <div style="grid-column:1/-1;display:flex;gap:10px;">
+        <button type="submit">Generate</button>
+        <a href="/" class="btn">Reset</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
