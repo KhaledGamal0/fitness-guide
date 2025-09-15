@@ -1,0 +1,9 @@
+{
+  "short_name": "Fitness",
+  "name": "Fitness Guide",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Interactive fitness and nutrition guide",
+  "icons": []
+}
